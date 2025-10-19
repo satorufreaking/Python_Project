@@ -1,0 +1,51 @@
+"""
+Workflow
+item_list-rock,scissor,paper
+user_input
+comp_choice
+  
+case 1:
+rock-rock=tie
+rock-scissor=user win
+rock-paper=comp_win
+
+case 2:
+paper-paper=tie
+paper-rock=user win
+paper-scissor=comp_win
+
+case 3:
+scissor-scissor=tie
+paper-scissor=user win
+paper-rock=comp_win
+
+"""
+
+import random
+item_list=["Rock","Paper","Scissor"]
+
+user_choice=input("Enter your move (Rock,Paper,Scissor):")
+comp_choice=random.choice(item_list)
+
+print(f"User choice = {user_choice},Computer_choice={comp_choice}")
+
+if user_choice==comp_choice:
+    print("Tie")
+
+elif user_choice=="Rock":
+    if comp_choice=="Paper":
+        print("Computer Win")
+    else:
+        print("User Win")
+
+elif user_choice=="Paper":
+    if comp_choice=="Rock":
+        print("User Win")
+    else:
+        print("Computer Win")
+
+elif user_choice=="Scissor":
+    if comp_choice=="Paper":
+        print("User win")
+    else:
+        print("Computer Win")
